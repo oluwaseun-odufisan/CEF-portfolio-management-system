@@ -17,7 +17,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(() => {
+  try {
+    const stored = window.localStorage?.getItem("cef-theme-mode") || "system";
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const resolved = stored === "system" ? (prefersDark ? "dark" : "light") : stored;
+    document.documentElement.dataset.theme = resolved;
+    document.documentElement.dataset.themeMode = stored;
+  } catch {
+    document.documentElement.dataset.theme = "light";
+    document.documentElement.dataset.themeMode = "system";
+  }
+})();
+            `.trim()
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

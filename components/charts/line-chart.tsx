@@ -30,19 +30,19 @@ export function LineChart({
         role="img"
         viewBox={`0 0 ${width} ${height}`}
       >
-        <rect fill="#FFFDF7" height={height} width={width} />
+        <rect fill="var(--cef-surface)" height={height} width={width} />
         {[0, 1, 2, 3].map((line) => {
           const y = padding + line * ((height - padding * 2) / 3);
-          return <line key={line} stroke="#CBD3D7" strokeWidth="1" x1={padding} x2={width - padding} y1={y} y2={y} />;
+          return <line key={line} stroke="var(--cef-line)" strokeWidth="1" x1={padding} x2={width - padding} y1={y} y2={y} />;
         })}
-        <polyline className="cef-line-path" fill="none" points={polyline} stroke="#2E6F59" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
+        <polyline className="cef-line-path" fill="none" points={polyline} stroke="var(--cef-gold)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
         {points.map((point, index) => (
           <g key={point.label}>
-            <circle className="cef-chart-dot" cx={point.x} cy={point.y} fill="#0D1524" r="5" style={{ animationDelay: `${index * 70}ms` }} />
-            <text fill="#566271" fontSize="14" textAnchor="middle" x={point.x} y={height - 8}>
+            <circle className="cef-chart-dot" cx={point.x} cy={point.y} fill="var(--cef-navy)" r="5" style={{ animationDelay: `${index * 70}ms` }} />
+            <text fill="var(--cef-slate)" fontSize="14" textAnchor="middle" x={point.x} y={height - 8}>
               {point.label}
             </text>
-            <text fill="#141E2D" fontSize="14" fontWeight="700" textAnchor="middle" x={point.x} y={Math.max(18, point.y - 12)}>
+            <text fill="var(--cef-ink)" fontSize="14" fontWeight="700" textAnchor="middle" x={point.x} y={Math.max(18, point.y - 12)}>
               {point.value}
               {suffix}
             </text>

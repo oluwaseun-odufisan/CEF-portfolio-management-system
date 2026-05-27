@@ -83,7 +83,7 @@ export function SubstationPage() {
         />
       </section>
 
-      <section className="mt-8 rounded-panel border border-cef-gold bg-[#EFE5CA] p-5">
+      <section className="cef-brand-panel mt-8 rounded-panel p-5">
         <h2 className="text-2xl font-semibold text-cef-navy">Decision points</h2>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           {[

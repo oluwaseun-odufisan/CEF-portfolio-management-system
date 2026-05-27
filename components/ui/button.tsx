@@ -29,7 +29,7 @@ const variants: Record<ButtonVariant, string> = {
   primary: "border-cef-navy bg-cef-navy text-cef-surface hover:bg-cef-navy2",
   secondary:
     "border-cef-line bg-cef-surface text-cef-navy hover:border-cef-gold hover:bg-cef-white hover:text-cef-gold2",
-  dark: "border-cef-gold bg-cef-gold text-cef-navy hover:bg-[#AE873C]",
+  dark: "border-cef-gold bg-cef-gold text-[#081225] hover:bg-[#2396CD]",
   quiet: "border-transparent bg-transparent text-cef-navy hover:bg-cef-surfaceAlt",
   danger: "border-cef-red bg-cef-red text-white hover:bg-cef-red2"
 };

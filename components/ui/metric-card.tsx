@@ -2,9 +2,9 @@ import type { MetricTone } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 const toneClasses: Record<MetricTone, string> = {
-  navy: "border-cef-line [--metric-accent:#0D1524]",
+  navy: "border-cef-line [--metric-accent:#312783]",
   green: "border-cef-line [--metric-accent:#2E6F59]",
-  gold: "border-cef-line [--metric-accent:#C4A052]",
+  gold: "border-cef-line [--metric-accent:#36A9E1]",
   amber: "border-cef-line [--metric-accent:#B97822]",
   red: "border-cef-line [--metric-accent:#A23D35]",
   blueGrey: "border-cef-line [--metric-accent:#4D6476]",

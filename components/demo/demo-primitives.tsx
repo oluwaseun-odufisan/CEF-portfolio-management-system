@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 export function InsightPanel({ children, title }: { children: ReactNode; title: string }) {
   return (
-    <section className="rounded-panel border border-cef-gold bg-[#EFE5CA] p-5 shadow-lift">
+    <section className="cef-brand-panel rounded-panel p-5 shadow-lift">
       <div className="flex items-center gap-2">
         <h2 className="text-2xl font-semibold text-cef-navy">{title}</h2>
       </div>

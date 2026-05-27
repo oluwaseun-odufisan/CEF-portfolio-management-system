@@ -41,7 +41,7 @@ export function ExpansionPage() {
         </div>
       </section>
 
-      <section className="mt-8 rounded-panel border border-cef-gold bg-[#EFE5CA] p-5">
+      <section className="cef-brand-panel mt-8 rounded-panel p-5">
         <h2 className="text-2xl font-semibold text-cef-navy">Why CEF becomes the proof model</h2>
         <p className="mt-4 max-w-4xl text-[15px] leading-7 text-cef-ink">
           CEF contains the practical operating cases needed to prove the platform: clean-energy assets, collections visibility, GroSolar metering, EML scale pressure, Substation technical gaps, reporting needs, and FundCo AI action flow. Once these controls work, the same product logic can be adapted to HSF, AgroFund, and wider FundCo group control.

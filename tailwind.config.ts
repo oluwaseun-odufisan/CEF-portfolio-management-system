@@ -12,25 +12,25 @@ const config: Config = {
     extend: {
       colors: {
         cef: {
-          canvas: "#EEF1F2",
-          surface: "#FFFDF7",
-          surfaceAlt: "#E8ECEE",
-          navy: "#0D1524",
-          navy2: "#162234",
-          ink: "#141E2D",
-          slate: "#566271",
-          muted: "#74808E",
-          line: "#CBD3D7",
-          gold: "#C4A052",
-          gold2: "#8B6728",
+          canvas: "#F5F8FC",
+          surface: "#FFFFFF",
+          surfaceAlt: "#EEF4FA",
+          navy: "#312783",
+          navy2: "#251D66",
+          ink: "#181A34",
+          slate: "#5B6278",
+          muted: "#7B8295",
+          line: "#DCE3F0",
+          gold: "#36A9E1",
+          gold2: "#187DAF",
           green: "#2E6F59",
           green2: "#1F4F40",
           amber: "#B97822",
           amber2: "#7B4E12",
           red: "#A23D35",
           red2: "#792B26",
-          blueGrey: "#4D6476",
-          blueGrey2: "#314656",
+          blueGrey: "#647196",
+          blueGrey2: "#38405F",
           white: "#FFFFFF"
         }
       },
@@ -39,8 +39,8 @@ const config: Config = {
         control: "5px"
       },
       boxShadow: {
-        panel: "0 18px 40px rgba(13, 21, 36, 0.1)",
-        lift: "0 10px 22px rgba(13, 21, 36, 0.07)"
+        panel: "0 18px 40px rgba(49, 39, 131, 0.12)",
+        lift: "0 10px 22px rgba(49, 39, 131, 0.08)"
       },
       fontFamily: {
         sans: [

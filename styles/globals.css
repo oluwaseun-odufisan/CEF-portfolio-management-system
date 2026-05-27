@@ -4,16 +4,35 @@
 
 :root {
   color-scheme: light;
-  --cef-canvas: #eef1f2;
-  --cef-surface: #fffdf7;
-  --cef-navy: #0d1524;
-  --cef-ink: #141e2d;
-  --cef-slate: #566271;
-  --cef-line: #cbd3d7;
-  --cef-gold: #c4a052;
+  --cef-canvas: #f5f8fc;
+  --cef-surface: #ffffff;
+  --cef-surface-alt: #eef4fa;
+  --cef-navy: #312783;
+  --cef-navy2: #251d66;
+  --cef-ink: #181a34;
+  --cef-slate: #5b6278;
+  --cef-line: #dce3f0;
+  --cef-gold: #36a9e1;
+  --cef-gold2: #187daf;
+  --cef-blue-grey: #647196;
   --cef-green: #2e6f59;
   --cef-amber: #b97822;
   --cef-red: #a23d35;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --cef-canvas: #0f1020;
+  --cef-surface: #181a34;
+  --cef-surface-alt: #23264a;
+  --cef-navy: #312783;
+  --cef-navy2: #251d66;
+  --cef-ink: #f5f8ff;
+  --cef-slate: #c0c8df;
+  --cef-line: #34385f;
+  --cef-gold: #36a9e1;
+  --cef-gold2: #8bdcff;
+  --cef-blue-grey: #9aa5cb;
 }
 
 * {
@@ -52,11 +71,11 @@ button {
 
 ::selection {
   background: var(--cef-gold);
-  color: var(--cef-navy);
+  color: #081225;
 }
 
 :focus-visible {
-  outline: 3px solid rgba(184, 148, 70, 0.55);
+  outline: 3px solid rgba(54, 169, 225, 0.55);
   outline-offset: 3px;
 }
 
@@ -169,6 +188,166 @@ button {
 
   .cef-no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  .cef-brand-panel {
+    border: 1px solid var(--cef-gold);
+    background: #e6f5fc;
+  }
+
+  .cef-status-success {
+    border-color: #2e6f59;
+    background: #e3efe9;
+    color: #1f4f40;
+  }
+
+  .cef-status-warning {
+    border-color: #b97822;
+    background: #f4e1be;
+    color: #7b4e12;
+  }
+
+  .cef-status-critical {
+    border-color: #a23d35;
+    background: #f0d6d3;
+    color: #792b26;
+  }
+
+  .cef-status-neutral {
+    border-color: #647196;
+    background: #e0e7eb;
+    color: #38405f;
+  }
+
+  .cef-status-brand {
+    border-color: var(--cef-gold);
+    background: #e6f5fc;
+    color: #187daf;
+  }
+
+  .cef-status-severe {
+    border-color: #a23d35;
+    background: #a23d35;
+    color: #ffffff;
+  }
+
+  .cef-status-solid-warning {
+    border-color: #b97822;
+    background: #b97822;
+    color: #181a34;
+  }
+
+  .cef-status-solid-neutral {
+    border-color: #647196;
+    background: #647196;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  [data-theme="dark"] .bg-cef-canvas {
+    background-color: var(--cef-canvas);
+  }
+
+  [data-theme="dark"] .bg-cef-surface {
+    background-color: var(--cef-surface);
+  }
+
+  [data-theme="dark"] .bg-cef-surfaceAlt {
+    background-color: var(--cef-surface-alt);
+  }
+
+  [data-theme="dark"] .bg-cef-navy {
+    background-color: var(--cef-navy);
+  }
+
+  [data-theme="dark"] .bg-cef-navy2 {
+    background-color: var(--cef-navy2);
+  }
+
+  [data-theme="dark"] .bg-cef-gold {
+    background-color: var(--cef-gold);
+  }
+
+  [data-theme="dark"] .bg-cef-white,
+  [data-theme="dark"] .hover\:bg-cef-white:hover,
+  [data-theme="dark"] .focus\:bg-cef-white:focus {
+    background-color: var(--cef-surface);
+  }
+
+  [data-theme="dark"] .text-cef-navy,
+  [data-theme="dark"] .text-cef-ink {
+    color: var(--cef-ink);
+  }
+
+  [data-theme="dark"] .text-cef-slate,
+  [data-theme="dark"] .text-cef-muted {
+    color: var(--cef-slate);
+  }
+
+  [data-theme="dark"] .text-cef-surface {
+    color: #ffffff;
+  }
+
+  [data-theme="dark"] .text-cef-surfaceAlt {
+    color: #d7def4;
+  }
+
+  [data-theme="dark"] .text-cef-gold,
+  [data-theme="dark"] .text-cef-gold2 {
+    color: var(--cef-gold2);
+  }
+
+  [data-theme="dark"] .border-cef-line {
+    border-color: var(--cef-line);
+  }
+
+  [data-theme="dark"] .border-cef-blueGrey {
+    border-color: #4b5080;
+  }
+
+  [data-theme="dark"] .border-cef-gold {
+    border-color: var(--cef-gold);
+  }
+
+  [data-theme="dark"] input,
+  [data-theme="dark"] select,
+  [data-theme="dark"] textarea {
+    color-scheme: dark;
+  }
+
+  [data-theme="dark"] .cef-brand-panel {
+    background: #12334a;
+  }
+
+  [data-theme="dark"] .cef-status-success {
+    border-color: #2e6f59;
+    background: #18372f;
+    color: #a6dec8;
+  }
+
+  [data-theme="dark"] .cef-status-warning {
+    border-color: #b97822;
+    background: #3a2c17;
+    color: #f3c77a;
+  }
+
+  [data-theme="dark"] .cef-status-critical {
+    border-color: #a23d35;
+    background: #3a1f22;
+    color: #f4b0aa;
+  }
+
+  [data-theme="dark"] .cef-status-neutral {
+    border-color: #647196;
+    background: #2a3150;
+    color: #cbd5f0;
+  }
+
+  [data-theme="dark"] .cef-status-brand {
+    border-color: var(--cef-gold);
+    background: #12334a;
+    color: #8bdcff;
   }
 }
 

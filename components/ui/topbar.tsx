@@ -2,6 +2,7 @@
 
 import { Bell, Menu, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Topbar({ onMenu }: { onMenu: () => void }) {
   return (
@@ -42,6 +43,7 @@ export function Topbar({ onMenu }: { onMenu: () => void }) {
           <Button href="/" size="sm" variant="quiet">
             Landing
           </Button>
+          <ThemeToggle compact />
           <Button size="sm" variant="secondary">
             <Bell className="h-5 w-5" />
             Open Exceptions
